@@ -11,7 +11,7 @@ type Props = {
 export default function Modal({ show, children, closeModals }: Props): JSX.Element {
   return (
     <Overlay $how={show} onClick={closeModals}>
-      <ContentContainer $how={show} onClick={(e) => e.stopPropagation()}>
+      <ContentContainer $how={show} onClick={(e: any) => e.stopPropagation()}>
         <Close source={close} onClick={closeModals} />
         {children}
       </ContentContainer>
