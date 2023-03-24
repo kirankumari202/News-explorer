@@ -15,7 +15,6 @@ export default function SavedHero({ savedArticles, keywordCounter }: Props): JSX
     email: string;
   } | null>(UserContext);
 
-  // reset the subtitle display
   useEffect(() => {
     updateSubtitle();
   }, [keywordCounter, savedArticles]);

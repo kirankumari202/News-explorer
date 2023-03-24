@@ -1,16 +1,9 @@
-import React from 'react';
 import linkedin from '../../images/linkedin.svg';
 import github from '../../images/github.svg';
-import { Section, Copyright, Nav, TextLink, IconLink } from './styledFooter';
+import { Section, Nav, TextLink, IconLink } from './styledFooter';
 import { newsApi } from '../../utils/NewsApi';
 
 export default function Footer(): JSX.Element {
-  function handleCopyClick() {
-    newsApi
-      .getSources()
-      .then((response: any) => console.info(response.sources))
-      .catch((error: Error) => console.error(error));
-  }
   return (
     <Section>
       
